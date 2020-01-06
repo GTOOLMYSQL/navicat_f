@@ -1,0 +1,26 @@
+<div class="connect">
+  <div class="title">
+    <span>连接池工作台</span>
+    <nz-tabset>
+      <nz-tab [nzTitle]="connectRef">
+        <ng-template #connectRef>
+          <a nz-tab-link [routerLink]="['/main/connect/list']">
+            <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+            连接
+          </a>
+        </ng-template>
+      </nz-tab>
+      <nz-tab [nzTitle]="createRef">
+        <ng-template #createRef>
+          <a nz-tab-link [routerLink]="['/main/connect/form']">
+            <i nz-icon nzType="plus-square" nzTheme="outline"></i>
+            创建
+          </a>
+        </ng-template>
+      </nz-tab>
+    </nz-tabset>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

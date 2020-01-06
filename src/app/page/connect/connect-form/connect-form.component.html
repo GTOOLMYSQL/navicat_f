@@ -1,0 +1,45 @@
+<div class="connect-form">
+  <form nz-form [formGroup]="connectForm">
+    <nz-form-item nzFlex>
+      <nz-form-label nzFor="" nzSpan="8" nzRequired>连接名称</nz-form-label>
+      <nz-form-control nzSpan="16">
+        <input nz-input formControlName="name" name="name" placeholder="">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nzFlex>
+      <nz-form-label nzFor="" nzSpan="8" nzRequired>地址</nz-form-label>
+      <nz-form-control nzSpan="16">
+        <input nz-input formControlName="ip" id="ip" name="ip" placeholder="">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nzFlex>
+      <nz-form-label nzFor="" nzSpan="8" nzRequired>端口</nz-form-label>
+      <nz-form-control nzSpan="16">
+        <input nz-input formControlName="port" id="port" name="port" placeholder="">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nzFlex>
+      <nz-form-label nzFor="" nzSpan="8" nzRequired>用户名</nz-form-label>
+      <nz-form-control nzSpan="16">
+        <input nz-input formControlName="username" id="username" name="username" placeholder="">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nzFlex>
+      <nz-form-label nzFor="" nzSpan="8" nzRequired>密码</nz-form-label>
+      <nz-form-control nzSpan="16">
+        <input nz-input formControlName="password" id="password" name="password" placeholder="">
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nzFlex>
+      <nz-form-label nzFor="" nzSpan="8" nzRequired>备注</nz-form-label>
+      <nz-form-control nzSpan="16">
+        <textarea nz-input formControlName="sourceDesc" name="sourceDesc"></textarea>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  <div style="text-align: center;">
+    <button nz-button nzType="primary" (click)="createConnect()" [nzLoading]="submiting">
+      创建
+    </button>
+  </div>
+</div>
