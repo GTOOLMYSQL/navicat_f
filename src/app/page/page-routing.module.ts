@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { ConnectComponent } from "./connect/connect.component";
 import { ConnectListComponent } from "./connect/connect-list/connect-list.component";
 import { ConnectFormComponent } from './connect/connect-form/connect-form.component';
+import { WorkspaceComponent } from './workspace/workspace.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "connect", pathMatch: "full" },
@@ -15,6 +16,9 @@ const routes: Routes = [
       { path: "list", component: ConnectListComponent },
       { path: "form", component: ConnectFormComponent }
     ]
+  },
+  {
+    path: 'workSpace/:connectId', component: WorkspaceComponent, data: {},
   }
 ];
 
@@ -22,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PageRoutingModule {}
+export class PageRoutingModule { }

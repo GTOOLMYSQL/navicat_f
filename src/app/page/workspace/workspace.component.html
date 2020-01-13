@@ -1,1 +1,28 @@
-<p>workspace works!</p>
+<div class="workspace">
+    <div class="tool-bar">
+        <span class="tool-item" [ngClass]="{'active': tool.active}" *ngFor="let tool of tools"
+            (click)="activeTab(tool)">
+            <p><i nz-icon [nzType]="tool.icon" nzTheme="outline"></i></p>
+            <p>{{tool.name}}</p>
+        </span>
+    </div>
+    <div class="content">
+        <div class="database">
+            <nz-list [nzDataSource]="database" nzBordered [nzRenderItem]="defaultItem">
+                <ng-template #defaultItem let-item>
+                    <nz-list-item>
+                        <span class="ant-typography"><i nz-icon nzType="database" nzTheme="fill"></i></span>
+                        {{ item.SCHEMA_NAME }}
+                    </nz-list-item>
+                </ng-template>
+            </nz-list>
+        </div>
+        <div class="drag-line"></div>
+        <div class="view">
+
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+</div>

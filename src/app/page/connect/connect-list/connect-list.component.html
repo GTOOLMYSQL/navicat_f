@@ -7,6 +7,18 @@
       <span class="name box">
         {{connect.name}}
       </span>
+      <span class="detail box">
+        <a nz-dropdown [nzDropdownMenu]="menu">
+          <i nz-icon nzType="unordered-list" nzTheme="outline"></i>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item (click)="openWorkSpace(connect)"><i nz-icon nzType="play-circle" nzTheme="outline"></i>打开工作空间</li>
+            <li nz-menu-item><i nz-icon nzType="edit" nzTheme="outline"></i>修改</li>
+            <li nz-menu-item><i nz-icon nzType="file-text" nzTheme="outline"></i>详情</li>
+          </ul>
+        </nz-dropdown-menu>
+      </span>
     </div>
   </div>
 </div>

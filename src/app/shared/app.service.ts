@@ -5,7 +5,7 @@ import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
   providedIn: "root"
 })
 export class AppService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   options: any = {
     headers: new HttpHeaders({
       "Content-Type": "application/json"
@@ -17,7 +17,7 @@ export class AppService {
    * @param url 地址
    * @param params 参数
    */
-  getData(url, params) {
+  getData(url, params): any {
     url = url + new HttpParams(params);
     return this.http.get(url, this.options);
   }
@@ -44,5 +44,5 @@ export class AppService {
     });
   }
 
-  jsonP() {}
+  jsonP() { }
 }

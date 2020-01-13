@@ -1,0 +1,62 @@
+@import "./../../../styles.less";
+.workspace{
+    height: 100%;
+    .tool-bar{
+        height: 64px;
+        border-bottom: 1px solid gainsboro;
+        .tool-item{
+            width: 64px;
+            display: inline-block;
+            height: 64px;
+            padding: 12px 0;
+            cursor: pointer;
+            p{
+                text-align: center;
+                margin: 0;
+            }
+
+            &:hover{
+                background: @primary-3;
+                color: #fff;
+            }
+
+            &.active{
+                background: @primary-color;
+                color: #fff;
+            }
+
+            &.disable{
+                background: @disabled-bg;
+                color: @disabled-color;
+            }
+        }
+    }
+
+    .content{
+        height: calc(100% - 64px - 32px);
+        .box{
+            height:100%;
+        }
+        .database{
+            width: 300px;
+            float: left;
+            .box();
+        }
+        .drag-line{
+            width: 0px;
+            float: left;
+            border-left: 1px solid gainsboro;
+            .box();
+        }
+        .view{
+            width: calc(100% - 300px - 2px);
+            float: left;
+            .box();
+        }
+    }
+    .footer{
+        height: 32px;
+        line-height: 32px;
+        border-top: 1px solid gainsboro;
+    }
+}
